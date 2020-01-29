@@ -1,2 +1,0 @@
-[2020-01-24 09:17:54] layer "logo-3.jpg": Duplicate path: logo-3.jpg
-[2020-01-24 09:17:54] layer "email@example.com": Unsupported extension: com
