@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Интернет-магазин "Девайс"</title>
+  <title>Проект "Девайс"</title>
 </head>
 <body>
   <header>
@@ -15,11 +15,6 @@
         <img src="img/logo.png" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
       </a>
       <ul>
-        
-        <!--
-          FIXME: Ссылку "Поиск по сайту" заменить на поле поиска
-        -->
-        
         <li><a href="#">Поиск по сайту</a></li>
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
@@ -29,12 +24,12 @@
         <li>
           <a href="#">Каталог товаров</a>
           <ul>
-            <li><a href="catalog.html">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Фитнес-браслеты</a></li>
-            <li><a href="catalog.html">Квардокоптеры</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="catalog.html">Умные часы</a></li>
-            <li><a href="catalog.html">Экшн-камеры</a></li>
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Фитнес-браслеты</a></li>
+            <li><a href="#">Квардокоптеры</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Умные часы</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
           </ul>
         </li>
         <li><a href="#">Доставка</a></li>
@@ -55,13 +50,6 @@
           <label for="btn-2"></label>
           <label for="btn-3"></label>
         </div>
-
-        <!--
-          FIXME: Рассмотреть варианты замены:
-          - множественного списка определений в слайдере;
-          - абсолютно позиционированных слайдов на "пельмень" из последовательных слайдов со смещением трансформацией.
-        -->
-
         <div class="slider-inner">
           <div class="slider-slides">
             <article class="slider-slide">
@@ -69,7 +57,7 @@
                 <img src="img/slider-1.png" width="384px" height="486px" alt="Палка для селфи">
               </figure>
               <div class="slide-description">
-                <h2 class="header">
+                <h2 class="slide-header">
                   Делай селфи,<br>
                   как Бен Стиллер! 
                 </h2>
@@ -99,7 +87,7 @@
                 <img src="img/slider-2.png" width="345px" height="485px" alt="Фитнес-браслет">
               </figure>
               <div class="slide-description">
-                <h2 class="header">
+                <h2 class="slide-header">
                   Худеем<br>
                   правильно! 
                 </h2>
@@ -121,7 +109,7 @@
                 <img src="img/slider-3.png" width="526px" height="334px" alt="Квадрокоптер">
               </figure>
               <div class="slide-description">
-                <h2 class="header">
+                <h2 class="slide-header">
                   Порхает как бабочка,<br>
                   жалит как пчела!
                 </h2>
@@ -147,11 +135,6 @@
       </div>
 
     </section>
-    
-    <!--
-      FIXME: Убрать картинки в разделе popular из разметки в стили
-    -->
-        
     <section class="content popular">
       <ul class="popular-conteiner">
         <li>
@@ -186,13 +169,7 @@
         </li>
       </ul>
     </section>
-    <section class="content services">
-
-    <!--
-      TODO: Запилить второй слайдер по сервисам
-    -->
-
-    </section>
+    <section class="content services"></section>
     <section class="content logotypes">
       <img class="logotypes-image" src="img/logo-1-jpg.png" width="260px" height="100px" alt="Логотип DJI">
       <img class="logotypes-image" src="img/logo-2-jpg.png" width="260px" height="100px" alt="Логотип SP Gadgets">
@@ -201,91 +178,27 @@
     </section>
     <section class="content info">
       <section class="content about">
-        <h2 class="header">
-          О нас 
+        <h2 class="slide-header">
+          Худеем<br>
+          правильно! 
         </h2>
         <p class="text-light">
-          Огромный выбор гаджетов не оставит равнодушным гика,<br>
-          который есть в каждом из нас.
+          Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+          не пропускать занятия и соблюдать диету.
         </p>
         <p class="text-light">
-          Мы можем доставить ваш товар в самые отдаленные точки<br>
-          России! DEVICE работает со многими транспортными компаниями:
+          Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+          не пропускать занятия и соблюдать диету.
         </p>
-        <ul>
-          <li>
-            <p>Деловые линии</p>
-          </li>
-          <li>
-            <p>Автотрейдинг</p>
-          </li>
-          <li>
-            <p>ЖелДорЭкспедиция</p>
-          </li>
-        </ul>
-        <a class="button button-info" href="catalog.html">Подробнее о нас</a>
+        <a class="button" href="catalog.html">Подробнее</a>
+
       </section>
-      <section class="content contacts">
-        <h2 class="header">
-          Контакты 
-        </h2>
-        <p class="text-light">
-          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
-        </p>
-        <img src="img/map.jpg" width="560px" height="222px" alt="Карта-мини">
-        <a class="button button-info" href="catalog.html">Напишите нам</a>
-      </section>
+      <section class="content contacts"></section>
     </section>
   </main>
-  <footer class="footer">
-    <div class="footer-left">
-      <a href="#">
-        <img src="img/logo.png" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
-      </a>
-      <p>
-        г. Москва, ул. Строителей, 15
-      </p>
-    </div>
-    <div class="footer-center">
-      <ul>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">Гарантия</a></li>
-        <li><a href="">Контакты</a></li>
-      </ul>
-      <ul>
-        <li>
-          <a href="">
-            <img src="img/social-facebook.png" width="32" height="32" alt="Facebook">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/social-instagram.png" width="32" height="32" alt="Instagram">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/social-twitter.png" width="32" height="32" alt="Twitter">
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-right">
-      <ul>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
-      </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
-      <a href="">
-        <img src="img/logo-htmlacademy.png" width="27" height="35" alt="Логотип HTML-академии">
-      </a>
-    </div>
+  <footer>
+    adfgdafgdaf
   </footer>
-
-    <!--
-      TODO: Запилить два popup - карта и модальное окно с обращением
-    -->
-
+  
 </body>
 </html>
