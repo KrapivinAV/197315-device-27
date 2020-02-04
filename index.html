@@ -1,74 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Интернет-магазин "Девайс"</title>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <a>
-        <img src="img/logo.png" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
-      </a>
-      <ul>
-        
-        <!--
-          FIXME: Ссылку "Поиск по сайту" заменить на поле поиска
-        -->
-        
-        <li><a href="#">Поиск по сайту</a></li>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
-      </ul>
-      <ul>
-        <li>
-          <a href="#">Каталог товаров</a>
-          <ul>
-            <li><a href="catalog.html">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Фитнес-браслеты</a></li>
-            <li><a href="catalog.html">Квардокоптеры</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="catalog.html">Умные часы</a></li>
-            <li><a href="catalog.html">Экшн-камеры</a></li>
-          </ul>
+
+  <header class="site-header">
+
+    <a class="site-header__logo" href="">
+      <img class="site-header__logo-img" src="img/logo-black.svg" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
+    </a>
+
+    <nav class="site-header__secondary-menu">
+      <ul class="site-header__secondary-menu-list">
+        <li class="site-header__secondary-menu-item">
+          <form class="site-header__search search-form" action="https://echo.htmlacademy.ru/courses" method="post">
+            <input class="search-form__field" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <label class="search-form__label" for="search">
+              <img class="search-form__label-img" src="img/search.svg" width="16" height="16" alt="Поиск">
+            </label>
+            <input class="search-form__button-submit" type="submit" value="Найти">
+          </form>
         </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантии</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li class="site-header__secondary-menu-item">
+          <a class="site-header__secondary-menu-link" href="#">Войти</a>
+        </li>
+        <li class="site-header__secondary-menu-item">
+          <a class="site-header__secondary-menu-link" href="#">Сравнить</a>
+        </li>
+        <li class="site-header__secondary-menu-item">
+          <a class="site-header__secondary-menu-link" href="#">Корзина</a>
+        </li>
       </ul>
     </nav>
+    
+    <nav class="site-header__primary-menu">
+      <ul class="site-header__primary-menu-list">
+        <li class="site-header__primary-menu-item">
+          <a class="site-header__primary-menu-link" href="catalog.html">Каталог товаров</a>
+          <ul class="site-header__primary-submenu-list">
+            <li class="site-header__primary-submenu-item">
+              <a class="site-header__primary-submenu-link" href="virtual-reality.html">Виртуальная реальность</a>
+            </li>
+            <li class="site-header__primary-submenu-item">
+              <a class="site-header__primary-submenu-link" href="monopods-for-a-selfie.html">Моноподы для селфи</a>
+            </li>
+            <li class="site-header__primary-submenu-item">
+              <a class="site-header__primary-submenu-link" href="action-cameras.html">Экшн-камеры</a>
+            </li>
+            <li class="site-header__primary-submenu-item">
+              <a class="site-header__primary-submenu-link" href="fitness-bracelets.html">Фитнес-браслеты</a>
+            </li>
+            <li class="site-header__primary-submenu-item">
+              <a class="site-header__primary-submenu-link" href="smart-watch.html">Умные часы</a>
+            </li>
+            <li class="site-header__primary-submenu-item">
+              <a class="site-header__primary-submenu-link" href="quadcopters.html">Квардокоптеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="site-header__primary-menu-item">
+          <a class="site-header__primary-menu-link" href="#">Доставка</a>
+        </li>
+        <li class="site-header__primary-menu-item">
+          <a class="site-header__primary-menu-link" href="#">Гарантии</a>
+        </li>
+        <li class="site-header__primary-menu-item">
+          <a class="site-header__primary-menu-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
   </header>
+
   <main class="content-container">
-    <section class="content promo">
+    
+    <section class="content-container__promo promo">
       <h1>Промо-слайдер</h1>
-      <div class="slider">
-        <input type="radio" id="btn-1" name="toggle" checked>
-        <input type="radio" id="btn-2" name="toggle">
-        <input type="radio" id="btn-3" name="toggle">
-        <div class="slider-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-          <label for="btn-3"></label>
+      <div class="promo-slider">
+        <input type="radio" id="promo-btn-1" name="toggle" checked>
+        <input type="radio" id="promo-btn-2" name="toggle">
+        <input type="radio" id="promo-btn-3" name="toggle">
+        <div class="promo-slider__controls">
+          <label for="promo-btn-1"></label>
+          <label for="promo-btn-2"></label>
+          <label for="promo-btn-3"></label>
         </div>
-
-        <!--
-          FIXME: Рассмотреть варианты замены:
-          - множественного списка определений в слайдере;
-          - абсолютно позиционированных слайдов на "пельмень" из последовательных слайдов со смещением трансформацией.
-        -->
-
-        <div class="slider-inner">
-          <div class="slider-slides">
-            <article class="slider-slide">
-              <figure class="slide-image">
-                <img src="img/slider-1.png" width="384px" height="486px" alt="Палка для селфи">
+        <div class="promo-slider__inner">
+          <div class="promo-slider__slides">
+            <article class="promo-slider__slide promo-slide">
+              <figure class="promo-slide__image">
+                <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
               </figure>
-              <div class="slide-description">
+              <div class="promo-slide__description">
                 <h2 class="header">
                   Делай селфи,<br>
                   как Бен Стиллер! 
@@ -77,28 +106,28 @@
                   Самая длинная палка для селфи доступна в нашем магазине.<br>
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
-                <a class="button" href="catalog.html">Подробнее</a>
-                <div class="slider-slide-pref">
-                  <dl class="slider-slide-pref-item">
-                    <dt class="item-parameter-value">8,5 м</dt class="item-parameter-value">
-                    <dd class="item-parameter">Длина палки</dd>
+                <a class="button button-slider" href="catalog.html">Подробнее</a>
+                <div class="promo-slide__preference preference">
+                  <dl class="preference__item item">
+                    <dt class="item__parameter-value">8,5 м</dt>
+                    <dd class="item__parameter">Длина палки</dd>
                   </dl>
-                  <dl class="slider-slide-pref-item">
-                    <dt class="item-parameter-value">5 кг</dt>
-                    <dd class="item-parameter">Вес палки</dd>
+                  <dl class="preference__item item">
+                    <dt class="item__parameter-value">5 кг</dt>
+                    <dd class="item__parameter">Вес палки</dd>
                   </dl>
-                  <dl class="slider-slide-pref-item">
-                    <dt class="item-parameter-value">Карбон</dt>
-                    <dd class="item-parameter">Материал</dd>
+                  <dl class="preference__item item">
+                    <dt class="item__parameter-value">Карбон</dt>
+                    <dd class="item__parameter">Материал</dd>
                   </dl>
                 </div>
               </div>
             </article>
-            <article class="slider-slide">
-              <figure class="slide-image">
-                <img src="img/slider-2.png" width="345px" height="485px" alt="Фитнес-браслет">
+            <article class="promo-slider__slide promo-slide">
+              <figure class="promo-slide__image">
+                <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
               </figure>
-              <div class="slide-description">
+              <div class="promo-slide__description">
                 <h2 class="header">
                   Худеем<br>
                   правильно! 
@@ -107,20 +136,20 @@
                   Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
                   не пропускать занятия и соблюдать диету.
                 </p>
-                <a class="button" href="catalog.html">Подробнее</a>
-                <div class="slider-slide-pref">
-                  <dl class="slider-slide-pref-item">
-                    <dt class="item-parameter-value">48 часов</dt>
-                    <dd class="item-parameter">Без подзарядки</dd>
+                <a class="button button-slider" href="catalog.html">Подробнее</a>
+                <div class="promo-slide__preference preference">
+                  <dl class="preference__item item">
+                    <dt class="item__parameter-value">48 часов</dt>
+                    <dd class="item__parameter">Без подзарядки</dd>
                   </dl>
                 </div>
               </div>
             </article>
-            <article class="slider-slide">
-              <figure class="slide-image">
-                <img src="img/slider-3.png" width="526px" height="334px" alt="Квадрокоптер">
+            <article class="promo-slider__slide promo-slide">
+              <figure class="promo-slide__image">
+                <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
               </figure>
-              <div class="slide-description">
+              <div class="promo-slide__description">
                 <h2 class="header">
                   Порхает как бабочка,<br>
                   жалит как пчела!
@@ -129,15 +158,15 @@
                   Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                   мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a class="button" href="catalog.html">Подробнее</a>
-                <div class="slider-slide-pref">
-                  <dl class="slider-slide-pref-item">
-                    <dt class="item-parameter-value">800 м</dt class="item-parameter-value">
-                    <dd class="item-parameter">Дальность полета</dd>
+                <a class="button button-slider" href="catalog.html">Подробнее</a>
+                <div class="promo-slide__preference preference">
+                  <dl class="preference__item item">
+                    <dt class="item__parameter-value">800 м</dt>
+                    <dd class="item__parameter">Дальность полета</dd>
                   </dl>
-                  <dl class="slider-slide-pref-item">
-                    <dt class="item-parameter-value">50 м</dt>
-                    <dd class="item-parameter">Радиус поражения</dd>
+                  <dl class="preference__item item">
+                    <dt class="item__parameter-value">50 м</dt>
+                    <dd class="item__parameter">Радиус поражения</dd>
                   </dl>
                 </div>
               </div>
@@ -145,147 +174,166 @@
           </div>
         </div>
       </div>
-
     </section>
     
-    <!--
-      FIXME: Убрать картинки в разделе popular из разметки в стили
-    -->
-        
-    <section class="content popular">
-      <ul class="popular-conteiner">
+    <section class="content-container__popular popular">
+      <ul class="popular__conteiner">
         <li>
-          <a class="popular-item popular-item-1" href="catalog.html">
-            <img class="popular-image" src="img/popular-1.png" width="97px" height="55px" alt="Виртуальная реальность">
+          <a class="popular__item popular-virtual-reality" href="virtual-reality.html">
+            <img class="popular__image" src="img/popular-1.png" width="97" height="55" alt="Виртуальная реальность">
           </a>
         </li>
         <li>
-          <a class="popular-item popular-item-2" href="catalog.html">
-            <img class="popular-image" src="img/popular-2.png" width="86px" height="117px" alt="Моноподы для селфи">
+          <a class="popular__item popular-monopods-for-a-selfie" href="monopods-for-a-selfie.html">
+            <img class="popular__image" src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи">
           </a>
         </li>
         <li>
-          <a class="popular-item popular-item-3" href="catalog.html">
-            <img class="popular-image" src="img/popular-3.png" width="71px" height="87px" alt="Экшн-камеры">
+          <a class="popular__item popular-action-cameras" href="action-cameras.html">
+            <img class="popular__image" src="img/popular-3.png" width="71" height="87" alt="Экшн-камеры">
           </a>
         </li>
         <li>
-          <a class="popular-item popular-item-4" href="catalog.html">
-            <img class="popular-image" src="img/popular-4.png" width="107px" height="65px" alt="Фитнес-браслеты">
+          <a class="popular__item popular-fitness-bracelets" href="fitness-bracelets.html">
+            <img class="popular__image" src="img/popular-4.png" width="107" height="65" alt="Фитнес-браслеты">
           </a>
         </li>
         <li>
-          <a class="popular-item popular-item-5" href="catalog.html">
-            <img class="popular-image" src="img/popular-5.png" width="56px" height="98px" alt="Умные часы">
+          <a class="popular__item popular-smart-watch" href="smart-watch.html">
+            <img class="popular__image" src="img/popular-5.png" width="56" height="98" alt="Умные часы">
           </a>
         </li>
         <li>
-          <a class="popular-item popular-item-6" href="catalog.html">
-            <img class="popular-image" src="img/popular-6.png" width="132px" height="69px" alt="Квадрокоптеры">
+          <a class="popular__item popular-quadcopters" href="quadcopters.html">
+            <img class="popular__image" src="img/popular-6.png" width="132" height="69" alt="Квадрокоптеры">
           </a>
         </li>
       </ul>
     </section>
-    <section class="content services">
+    
+    <section class="content-container__services services">
 
     <!--
       TODO: Запилить второй слайдер по сервисам
     -->
 
     </section>
-    <section class="content logotypes">
-      <img class="logotypes-image" src="img/logo-1-jpg.png" width="260px" height="100px" alt="Логотип DJI">
-      <img class="logotypes-image" src="img/logo-2-jpg.png" width="260px" height="100px" alt="Логотип SP Gadgets">
-      <img class="logotypes-image" src="img/logo-3-jpg.png" width="260px" height="100px" alt="Логотип GoPro">
-      <img class="logotypes-image" src="img/logo-4-jpg.png" width="260px" height="100px" alt="Логотип VIVE">
+    
+    <section class="content-container__logotypes logotypes">
+      <img class="logotypes__image" src="img/logo-1-jpg.png" width="260" height="100" alt="Логотип DJI">
+      <img class="logotypes__image" src="img/logo-2-jpg.png" width="260" height="100" alt="Логотип SP Gadgets">
+      <img class="logotypes__image" src="img/logo-3-jpg.png" width="260" height="100" alt="Логотип GoPro">
+      <img class="logotypes__image" src="img/logo-4-jpg.png" width="260" height="100" alt="Логотип VIVE">
     </section>
-    <section class="content info">
-      <section class="content about">
+    
+    <section class="content-container__info info">
+      
+      <section class="info__about about">
         <h2 class="header">
           О нас 
         </h2>
         <p class="text-light">
-          Огромный выбор гаджетов не оставит равнодушным гика,<br>
+          Огромный выбор гаджетов не оставит равнодушным гика,
           который есть в каждом из нас.
         </p>
         <p class="text-light">
-          Мы можем доставить ваш товар в самые отдаленные точки<br>
+          Мы можем доставить ваш товар в самые отдаленные точки
           России! DEVICE работает со многими транспортными компаниями:
         </p>
-        <ul>
-          <li>
-            <p>Деловые линии</p>
+        <ul class="about__delivery-list">
+          <li class="about__delivery-item">
+            <p class="about__delivery-text">Деловые линии</p>
           </li>
-          <li>
-            <p>Автотрейдинг</p>
+          <li class="about__delivery-item">
+            <p class="about__delivery-text">Автотрейдинг</p>
           </li>
-          <li>
-            <p>ЖелДорЭкспедиция</p>
+          <li class="about__delivery-item">
+            <p class="about__delivery-text">ЖелДорЭкспедиция</p>
           </li>
         </ul>
         <a class="button button-info" href="catalog.html">Подробнее о нас</a>
       </section>
-      <section class="content contacts">
+      
+      <section class="info__contacts contacts">
         <h2 class="header">
           Контакты 
         </h2>
         <p class="text-light">
-          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+          Вы можете забрать товар сами, заехав в наш офис. 
+          Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <img src="img/map.jpg" width="560px" height="222px" alt="Карта-мини">
+        <img class="contacts__map" src="img/map.jpg" width="560" height="222" alt="Карта-мини">
         <a class="button button-info" href="catalog.html">Напишите нам</a>
       </section>
+
     </section>
+  
   </main>
-  <footer class="footer">
-    <div class="footer-left">
-      <a href="#">
-        <img src="img/logo.png" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
+  
+  <footer class="site-footer">
+    <div class="site-footer__leftside footer-leftside">
+      <a class="footer-leftside__logo-link" href="#">
+        <img class="footer-leftside__logo-img" src="img/logo.png" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
       </a>
-      <p>
+      <p class="footer-leftside__address">
         г. Москва, ул. Строителей, 15
       </p>
     </div>
-    <div class="footer-center">
-      <ul>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">Гарантия</a></li>
-        <li><a href="">Контакты</a></li>
+    <div class="site-footer__center footer-center">
+      <ul class="footer-center__services-list">
+        <li class="footer-center__services-item">
+          <a class="footer-center__services-link" href="">Доставка</a>
+        </li>
+        <li class="footer-center__services-item">
+          <a class="footer-center__services-link" href="">Гарантия</a>
+        </li>
+        <li class="footer-center__services-item">
+          <a class="footer-center__services-link" href="">Контакты</a>
+        </li>
       </ul>
-      <ul>
-        <li>
-          <a href="">
-            <img src="img/social-facebook.png" width="32" height="32" alt="Facebook">
+      <ul class="footer-center__social-list">
+        <li class="footer-center__social-item">
+          <a class="footer-center__social-link" href="https://www.facebook.com/device">
+            <img class="footer-center__social-img" src="img/fb.svg" width="32" height="32" alt="Facebook">
           </a>
         </li>
-        <li>
-          <a href="">
-            <img src="img/social-instagram.png" width="32" height="32" alt="Instagram">
+        <li class="footer-center__social-item">
+          <a class="footer-center__social-link" href="https://www.instagram.com/device/">
+            <img class="footer-center__social-img" src="img/instagram.svg" width="32" height="32" alt="Instagram">
           </a>
         </li>
-        <li>
-          <a href="">
-            <img src="img/social-twitter.png" width="32" height="32" alt="Twitter">
+        <li class="footer-center__social-item">
+          <a class="footer-center__social-link" href="https://twitter.com/device">
+            <img class="footer-center__social-img" src="img/twitter.svg" width="32" height="32" alt="Twitter">
           </a>
         </li>
       </ul>
     </div>
-    <div class="footer-right">
-      <ul>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+    <div class="site-footer__rightside footer-rightside">
+      <ul class="footer-rightside__secondary-menu-list">
+        <li class="footer-rightside__secondary-menu-item">
+          <a class="footer-rightside__secondary-menu-link" href="#">Войти</a>
+        </li>
+        <li class="footer-rightside__secondary-menu-item">
+          <a class="footer-rightside__secondary-menu-link" href="#">Сравнить</a>
+        </li>
+        <li class="footer-rightside__secondary-menu-item">
+          <a class="footer-rightside__secondary-menu-link" href="#">Корзина</a class="footer-rightside__secondary-menu-link">
+        </li>
       </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
-      <a href="">
-        <img src="img/logo-htmlacademy.png" width="27" height="35" alt="Логотип HTML-академии">
+      <p class="footer-rightside__phone-text">
+        Тел.: 
+        <a class="footer-rightside__phone-link" href="tel:+74954959595">+7 (495) 495-95-95</a>
+      </p>
+      <a class="footer-rightside__developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img class="footer-rightside__developer-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML-академии">
       </a>
     </div>
   </footer>
 
-    <!--
-      TODO: Запилить два popup - карта и модальное окно с обращением
-    -->
+  <!--
+    TODO: Запилить два popup - карта и модальное окно с обращением
+  -->
 
 </body>
 </html>
