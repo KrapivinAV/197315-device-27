@@ -80,7 +80,7 @@
 
   <main class="content-conteiner">
     <section class="content-conteiner__where-am-I page">
-      <h1 class="page__title">Моноподы для селфи</h1>
+      <h1 class="page__title header">Моноподы для селфи</h1>
       <ul class="page__bread-crumbs-list">
         <li class="page__bread-crumbs-item">
           <a class="page__bread-crumbs-link" href="index.html">Главная</a>
@@ -97,13 +97,44 @@
       <section class="goods__filter">
         <h2 class="goods__filter-title">Фильтр:</h2>
 
-        <!--
-          TODO: Запилить форму параметров товаров для поиска
-        -->
-  
+        <form action="https://echo.htmlacademy.ru/courses" method="post">
+          <div class="goods__filter-price">
+            <label for="price">Стоимость</label>
+            <input type="range" id="price" name="price" min="0" max="10000" step="100">
+          </div>
+          <div class="goods__filter-color">
+            <label>
+              <input type="checkbox" name="black" checked>Черный
+            </label>
+            <label>
+              <input type="checkbox" name="white">Белый
+            </label>
+            <label>
+              <input type="checkbox" name="blue" checked>Синий
+            </label>
+            <label>
+              <input type="checkbox" name="red" checked>Красный
+            </label>
+            <label>
+              <input type="checkbox" name="pink">Розовый
+            </label>
+          </div>
+          <div class="goods__filter-bluetooth">
+            <label>
+              <input type="radio" name="bluetooth" value="Есть">Есть
+            </label>
+            <label>
+              <input type="radio" name="bluetooth" value="Нет" checked>Нет
+            </label>
+          </div>
+          <div class="goods__filter-buttons">
+            <input type="submit" value="Показать">
+          </div>
+        </form>
+    
       </section>
       <section class="goods__sorted sorted-goods">
-        <h2 class="sorted-goods__title">Список отсортированных товаров</h2>
+        <h2 class="sorted-goods__title visually-hidden">Список отсортированных товаров</h2>
         <div class="sorted-goods__sorter sorter">
           <h2 class="sorter__title">Сортировка:</h2>
           <ul class="sorter__parameter-list">
@@ -117,48 +148,56 @@
               <a class="sorter__parameter-link" href="#">По популярности</a>
             </li>
             <li class="sorter__parameter-item">
-              <a class="sorter__parameter-link arrow arrow-up" href="#"></a>
+              <a class="sorter__parameter-arrow arrow-up" href="#">
+                <img src="img/icon-up-dir.svg" width="11" height="10" alt="По возрастанию">
+              </a>
             </li>
             <li class="sorter__parameter-item">
-              <a class="sorter__parameter-link arrow arrow-down" href="#"></a>
+              <a class="sorter__parameter-arrow arrow-down" href="#">
+                <img src="img/icon-down-dir.svg" width="11" height="10" alt="По убыванию">
+              </a>
             </li>
           </ul>
         </div>
         <div class="sorted-goods__goods-items goods-items">
           <article class="goods-items__item item-good">
+            <img class="item-good__image" src="img/item-1.png" width="360" height="380" alt="Любительская селфи-палка">
             <div class="item-good__controls">
-              <a class="item-good__link button" href="#">Подробнее</a>
-              <a class="item-good__link" href="#">Добавить к сравнению</a>
+              <a class="item-good__link button button-goods" href="#">Подробнее</a>
+              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
             </div>
             <a class="item-good__page" href="#">Любительская селфи-палка</a>
             <p class="item-good__price">500 руб.</p>            
           </article>
           <article class="goods-items__item item-good">
+            <img class="item-good__image" src="img/item-2.png" width="360" height="380" alt="Профессиональная селфи-палка">
             <div class="item-good__controls">
-              <a class="item-good__link button" href="#">Подробнее</a>
-              <a class="item-good__link" href="#">Добавить к сравнению</a>
+              <a class="item-good__link button button-goods" href="#">Подробнее</a>
+              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
             </div>
             <a class="item-good__page" href="#">Профессиональная селфи-палка</a>
             <p class="item-good__price">1 500 руб.</p>
           </article>
           <article class="goods-items__item item-good">
+            <img class="item-good__image" src="img/item-3.png" width="360" height="380" alt="Непотопляемая селфи-палка">
             <div class="item-good__controls">
-              <a class="item-good__link button" href="#">Подробнее</a>
-              <a class="item-good__link" href="#">Добавить к сравнению</a>
+              <a class="item-good__link button button-goods" href="#">Подробнее</a>
+              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
             </div>
             <a class="item-good__page" href="#">Непотопляемая селфи-палка</a>
             <p class="item-good__price">2 500 руб.</p>
           </article>
           <article class="goods-items__item item-good">
+            <img class="item-good__image" src="img/item-4.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <div class="item-good__controls">
-              <a class="item-good__link button" href="#">Подробнее</a>
-              <a class="item-good__link" href="#">Добавить к сравнению</a>
+              <a class="item-good__link button button-goods" href="#">Подробнее</a>
+              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
             </div>
             <a class="item-good__page" href="#">Селфи-палка «Следуй за мной»</a>
             <p class="item-good__price">4 900 руб.</p>
           </article>
         </div>
-        <ul class="sorted-goods__pagination pagination">
+        <ul class="sorted-goods__pagination-list pagination">
           <li class="pagination__item">
             <a class="pagination__link" href="#">Назад</a>
           </li>

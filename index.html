@@ -81,16 +81,11 @@
   <main class="content-container">
     
     <section class="content-container__promo promo">
-      <h1>Промо-слайдер</h1>
+      <h1 class="visually-hidden">Промо-слайдер</h1>
       <div class="promo-slider">
-        <input type="radio" id="promo-btn-1" name="toggle" checked>
-        <input type="radio" id="promo-btn-2" name="toggle">
-        <input type="radio" id="promo-btn-3" name="toggle">
-        <div class="promo-slider__controls">
-          <label for="promo-btn-1"></label>
-          <label for="promo-btn-2"></label>
-          <label for="promo-btn-3"></label>
-        </div>
+        <input type="radio" id="promo-btn-1" name="promo-toggle" checked>
+        <input type="radio" id="promo-btn-2" name="promo-toggle">
+        <input type="radio" id="promo-btn-3" name="promo-toggle">
         <div class="promo-slider__inner">
           <div class="promo-slider__slides">
             <article class="promo-slider__slide promo-slide">
@@ -106,7 +101,12 @@
                   Самая длинная палка для селфи доступна в нашем магазине.<br>
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
-                <a class="button button-slider" href="catalog.html">Подробнее</a>
+                <div class="promo-slider__controls">
+                  <a class="button button-slider" href="catalog.html">Подробнее</a>
+                  <label for="promo-btn-1"></label>
+                  <label for="promo-btn-2"></label>
+                  <label for="promo-btn-3"></label>
+                </div>
                 <div class="promo-slide__preference preference">
                   <dl class="preference__item item">
                     <dt class="item__parameter-value">8,5 м</dt>
@@ -136,7 +136,12 @@
                   Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
                   не пропускать занятия и соблюдать диету.
                 </p>
-                <a class="button button-slider" href="catalog.html">Подробнее</a>
+                <div class="promo-slider__controls">
+                  <a class="button button-slider" href="catalog.html">Подробнее</a>
+                  <label for="promo-btn-1"></label>
+                  <label for="promo-btn-2"></label>
+                  <label for="promo-btn-3"></label>
+                </div>
                 <div class="promo-slide__preference preference">
                   <dl class="preference__item item">
                     <dt class="item__parameter-value">48 часов</dt>
@@ -158,7 +163,12 @@
                   Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                   мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a class="button button-slider" href="catalog.html">Подробнее</a>
+                <div class="promo-slider__controls">
+                  <a class="button button-slider" href="catalog.html">Подробнее</a>
+                  <label for="promo-btn-1"></label>
+                  <label for="promo-btn-2"></label>
+                  <label for="promo-btn-3"></label>
+                </div>
                 <div class="promo-slide__preference preference">
                   <dl class="preference__item item">
                     <dt class="item__parameter-value">800 м</dt>
@@ -212,11 +222,66 @@
     </section>
     
     <section class="content-container__services services">
-
-    <!--
-      TODO: Запилить второй слайдер по сервисам
-    -->
-
+      <h1 class="visually-hidden">Сервисы-слайдер</h1>
+      <div class="services-slider">
+        <input type="radio" id="services-btn-1" name="services-toggle" checked>
+        <input type="radio" id="services-btn-2" name="services-toggle">
+        <input type="radio" id="services-btn-3" name="services-toggle">
+        <div class="services-slider__controls">
+          <label class="button" for="services-btn-1">Доставка</label>
+          <label class="button" for="services-btn-2">Гарантия</label>
+          <label class="button" for="services-btn-3">Кредит</label>
+        </div>
+        <div class="services-slider__inner">
+          <div class="services-slider__slides">
+            <article class="services-slider__slide services-slide">
+              <div class="services-slide__description">
+                <h2 class="header">
+                  Доставка 
+                </h2>
+                <p class="text-light">
+                  Мы с удовольствием доставим ваш товар прямо к вашему 
+                  подъезду совершенно бесплатно! Ведь мы неплохо 
+                  заработаем, поднимая его на ваш этаж.
+                </p>
+              </div>
+              <figure class="services-slide__image">
+                <img src="img/delivery.svg" width="136" height="164" alt="Доставка-мэн">
+              </figure>
+            </article>
+            <article class="services-slider__slide services-slide">
+              <div class="services-slide__description">
+                <h2 class="header">
+                  Гарантия 
+                </h2>
+                <p class="text-light">
+                  Если из-за возгорания купленного у нас товара у вас сгорит 
+                  дом — не переживайте, мы выдадим вам новый. 
+                  Товар, не дом, конечно же.
+                </p>
+              </div>
+              <figure class="services-slide__image">
+                <img src="img/warranty.svg" width="171" height="194" alt="Серсис-центр">
+              </figure>
+            </article>
+            <article class="services-slider__slide services-slide">
+              <div class="services-slide__description">
+                <h2 class="header">
+                  Кредит
+                </h2>
+                <p class="text-light">
+                  Залезть в долговую яму стало проще! Кредитные 
+                  консультанты подберут для вас наиболее выгодные 
+                  условия кредита. Выгодные для нашего банка, разумеется.
+                </p>
+              </div>
+              <figure class="services-slide__image">
+                <img src="img/credit.svg" width="156" height="186" alt="Терпила-мэн">
+              </figure>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
     
     <section class="content-container__logotypes logotypes">
