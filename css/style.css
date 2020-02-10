@@ -162,11 +162,13 @@ body {
     background-color: transparent;
 }
 
-.site-header__secondary-menu-link:hover {
+.site-header__secondary-menu-item:hover,
+.site-header__secondary-menu-item:hover::before {
     opacity: 0.6;
 }
 
-.site-header__secondary-menu-link:active {
+.site-header__secondary-menu-item:active,
+.site-header__secondary-menu-item:active::before {
     opacity: 0.3;
 }
 
@@ -1288,15 +1290,13 @@ a.button:active {
     background-image: url(../img/cart-yellow.svg);
 }
 
-/*.footer-rightside__secondary-menu-item:hover ~ .footer-rightside__secondary-menu-item::after {
-    content: '';
+.footer-rightside__secondary-menu-item:hover::after {
     opacity: 0.6;
 }
 
-.footer-rightside__secondary-menu-item::before:active {
-    content: '';
+.footer-rightside__secondary-menu-item:active::after {
     opacity: 0.3;
-}*/
+}
 
 .footer-rightside__secondary-menu-link {
     font-family: 'Open Sans', 'Arial', sans-serif;
