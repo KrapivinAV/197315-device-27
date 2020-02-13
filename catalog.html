@@ -22,9 +22,13 @@
           <form class="site-header__search search-form" action="https://echo.htmlacademy.ru/courses" method="post">
             <input class="search-form__field" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <label class="search-form__label" for="search">
+              <p class="visually-hidden">Поиск по сайту</p>
               <img class="search-form__label-img" src="img/search.svg" width="16" height="16" alt="Поиск">
             </label>
-            <input class="search-form__button-submit" type="submit" value="Найти">
+            <input class="search-form__button-submit" id="search-submit" type="submit" value="Найти">
+            <label class="visually-hidden" for="search-submit">
+              Кнопка поля поиска
+            </label>
           </form>
         </li>
         <li class="site-header__secondary-menu-item">
@@ -79,6 +83,7 @@
   </header>
 
   <main class="content-conteiner">
+    
     <section class="content-conteiner__where-am-I page">
       <h1 class="page__title header">Моноподы для селфи</h1>
       <ul class="page__bread-crumbs-list">
@@ -93,46 +98,58 @@
         </li>
       </ul>
     </section>
+
     <section class="content-conteiner__goods goods">
+      
       <section class="goods__filter">
         <h2 class="goods__filter-title">Фильтр:</h2>
-
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
-          <div class="goods__filter-price">
-            <label for="price">Стоимость</label>
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
+          <fieldset class="goods__filter-price filter-price">
+            <legend class="filter-price__legend">Стоимость</legend>
             <input type="range" id="price" name="price" min="0" max="10000" step="100">
-          </div>
-          <div class="goods__filter-color">
-            <label>
-              <input type="checkbox" name="black" checked>Черный
-            </label>
-            <label>
-              <input type="checkbox" name="white">Белый
-            </label>
-            <label>
-              <input type="checkbox" name="blue" checked>Синий
-            </label>
-            <label>
-              <input type="checkbox" name="red" checked>Красный
-            </label>
-            <label>
-              <input type="checkbox" name="pink">Розовый
-            </label>
-          </div>
-          <div class="goods__filter-bluetooth">
-            <label>
-              <input type="radio" name="bluetooth" value="Есть">Есть
-            </label>
-            <label>
-              <input type="radio" name="bluetooth" value="Нет" checked>Нет
-            </label>
-          </div>
-          <div class="goods__filter-buttons">
-            <input type="submit" value="Показать">
-          </div>
+          </fieldset>
+          <fieldset class="goods__filter-color filter-color">
+            <legend class="filter-color__legend">Цвет</legend>
+            <ul class="filter-color__color-list">
+              <li class="filter-color__color-item">
+                <input type="checkbox" name="black" id="filter-color-black" checked>
+                <label for="filter-color-black">Черный</label>
+              </li>
+              <li class="filter-color__color-item">
+                <input type="checkbox" name="white" id="filter-color-white">
+                <label for="filter-color-white">Белый</label>
+              </li>
+              <li class="filter-color__color-item">
+                <input type="checkbox" name="blue" id="filter-color-blue" checked>
+                <label for="filter-color-blue">Синий</label>
+              </li>
+              <li class="filter-color__color-item">
+                <input type="checkbox" name="red" id="filter-color-red" checked>
+                <label for="filter-color-red">Красный</label>
+              </li>
+              <li class="filter-color__color-item">
+                <input type="checkbox" name="pink" id="filter-color-pink">
+                <label for="filter-color-pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="goods__filter-bluetooth">
+            <legend class="filter-bluetooth">Bluetooth</legend>
+            <ul class="filter-bluetooth__bluetooth-list">
+              <li class="filter-bluetooth__bluetooth-item">
+                <input type="radio" name="bluetooth" value="Есть" id="filter-bluetooth-yes">
+                <label for="filter-bluetooth-yes">Есть</label>
+              </li>
+              <li class="filter-bluetooth__bluetooth-item">
+                <input type="radio" name="bluetooth" value="Нет" id="filter-bluetooth-no" checked>
+                <label for="filter-bluetooth-no">Нет</label>
+              </li>
+            </ul>  
+          </fieldset>
+          <button class="goods__filter-buttons button" type="submit">Показать</button>
         </form>
-    
       </section>
+
       <section class="goods__sorted sorted-goods">
         <h2 class="sorted-goods__title visually-hidden">Список отсортированных товаров</h2>
         <div class="sorted-goods__sorter sorter">
@@ -215,8 +232,11 @@
           </li>
         </ul>
       </section>
+
     </section>
+
   </main>
+
   <footer class="site-footer">
     <div class="site-footer__leftside footer-leftside">
       <a class="footer-leftside__logo-link" href="index.html">
@@ -265,7 +285,7 @@
           <a class="footer-rightside__secondary-menu-link" href="#">Сравнить</a>
         </li>
         <li class="footer-rightside__secondary-menu-item">
-          <a class="footer-rightside__secondary-menu-link" href="#">Корзина</a class="footer-rightside__secondary-menu-link">
+          <a class="footer-rightside__secondary-menu-link" href="#">Корзина</a>
         </li>
       </ul>
       <p class="footer-rightside__phone-text">

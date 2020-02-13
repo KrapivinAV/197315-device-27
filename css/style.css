@@ -75,6 +75,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -365,6 +369,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 60px;
 }
   
 .promo-slider__controls label {
@@ -478,6 +483,10 @@ body {
     margin: 0;
 }
 
+.promo-slide__description .header {
+    margin-bottom: 30px;
+}
+
 .text-light {
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 15px;
@@ -488,9 +497,14 @@ body {
     margin: 0;
 }
 
+.promo-slide__description .text-light {
+    margin-bottom: 50px;
+}
+
+
 .button {
     display: block;
-    height: 40px;
+    min-height: 40px;
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -502,11 +516,12 @@ body {
     text-transform: uppercase;
     background-color: transparent;
     background-image: linear-gradient(
-        to top,
-        transparent 40%,
-        #f0c52e 40%,
-        #f0c52e 60%,
-        transparent 60%);
+        #f0c52e,
+        #f0c52e);
+    background-size: 100% 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
 }
 
 .button-slider {
@@ -520,10 +535,7 @@ body {
 
 .button:hover,
 .button:active {
-    background-image: linear-gradient(
-        to top,
-        #f0c52e,
-        #f0c52e);
+    background-size: 100% 100%;
 }
 
 a.button:active {
@@ -566,23 +578,30 @@ a.button:active {
     letter-spacing: 0.36px;
 }
 
-.popular__conteiner {
+.popular__conteiner-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 250px;
-    list-style: none;
     margin-top: 105px;
-    padding: 0;
 }
 
 .popular__item {
-    display: block;
+    width: 160px;
+}
+
+.popular__image-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px;
+}
+
+.popular__image-field div {
     position: relative;
     width: 160px;
     height: 160px;
-    text-align: center;
     background-color: rgb(240, 197, 46, 0.5);
 }
 
@@ -592,36 +611,33 @@ a.button:active {
     top: 50%; left: 50%;
 }
 
-.popular-virtual-reality .popular__image {
+.popular__virtual-reality .popular__image {
     transform: translate(-50%,-28px);
 }
 
-.popular-monopods-for-a-selfie .popular__image {
+.popular__monopods-for-a-selfie .popular__image {
     transform: translate(-50%,-39px);
 }
 
-.popular-action-cameras .popular__image {
+.popular__action-cameras .popular__image {
     transform: translate(-50%,-42px);
 }
 
-.popular-fitness-bracelets .popular__image {
+.popular__fitness-bracelets .popular__image {
     transform: translate(-50%,-30px);
 }
 
-.popular-smart-watch .popular__image {
+.popular__smart-watch .popular__image {
     transform: translate(-50%,-48px);
 }
 
-.popular-quadcopters .popular__image {
+.popular__quadcopters .popular__image {
     transform: translate(-50%,-31px);
 }
 
-.popular__item::after {
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    width: 160px;
+.popular__text {
     min-height: 50px;
+    margin-top: 40px;
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -632,36 +648,13 @@ a.button:active {
     color: #000000;
 }
 
-.popular-virtual-reality::after {
-    content: 'Виртуальная реальность';
-}
-
-.popular-monopods-for-a-selfie::after {
-    content: 'Моноподы для селфи';
-}
-
-.popular-action-cameras::after {
-    content: 'Экшн-камеры';
-}
-
-.popular-fitness-bracelets::after {
-    content: 'Фитнес-браслеты';
-}
-
-.popular-smart-watch::after {
-    content: 'Умные часы';
-}
-
-.popular-quadcopters::after {
-    content: 'Квадрокоптеры';
-}
-
-.popular__item:hover,
-.popular__item:active {
+.popular__item:hover div,
+.popular__item:active div {
     background-color: #f0c52e;
 }
 
-.popular__item:active .popular__image {
+.popular__item:active .popular__image,
+.popular__item:active .popular__text {
     opacity: 0.3;
 }
 
@@ -872,11 +865,11 @@ a.button:active {
     width: 485px;
 }
 
-.goods__filter-color,
+/*.goods__filter-color,
 .goods__filter-bluetooth {
     display: flex;
     flex-direction: column;
-}
+}*/
 
 .page {
     width: 1100px;
@@ -935,7 +928,39 @@ a.button:active {
 
 .goods__filter {
     width: 328px;
+    padding-left: 60px;
     background-color: #ebebeb;    
+}
+
+.goods__filter fieldset,
+.goods__filter-buttons {
+    width: 200px;
+    border: none;
+    margin: 0 0 40px 0;
+    padding: 0;
+}
+
+.goods__filter legend {
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    border-top: 2px solid #000000;
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    color: #000000;
+}
+
+.goods__filter label {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: 0.14px;
+    color: #000000;
+    margin: 0;
 }
 
 .goods__sorted {
@@ -950,6 +975,7 @@ a.button:active {
     background-color: #ebebeb;    
 }
 
+.goods__filter-title,
 .sorter__title {
     width: 200px;
     font-family: 'Gilroy', 'Arial', sans-serif;
@@ -1032,14 +1058,10 @@ a.button:active {
 }
 
 .item-good__controls {
-    display: none;
-}
-
-.item-good:hover .item-good__controls {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: -1;
     width: 360px;
     height: 380px;
     display: flex;
@@ -1047,6 +1069,10 @@ a.button:active {
     justify-content: center;
     align-items: center;
     background-color: rgb(238, 238, 238, 0.7);
+}
+
+.item-good:hover .item-good__controls {
+    z-index: 1;
 }
 
 .item-good__link {

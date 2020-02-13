@@ -22,6 +22,7 @@
           <form class="site-header__search search-form" action="https://echo.htmlacademy.ru/courses" method="post">
             <input class="search-form__field" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <label class="search-form__label" for="search">
+              <span class="visually-hidden">Поиск по сайту</span>
               <img class="search-form__label-img" src="img/search.svg" width="16" height="16" alt="Поиск">
             </label>
             <input class="search-form__button-submit" type="submit" value="Найти">
@@ -186,40 +187,67 @@
       </div>
     </section>
     
-    <!--
-      Перенести подписи к картинкам из псевдо во внутрь блоков popular__item      
-    -->
-
     <section class="content-container__popular popular">
-      <ul class="popular__conteiner">
-        <li>
-          <a class="popular__item popular-virtual-reality" href="virtual-reality.html">
-            <img class="popular__image" src="img/popular-1.png" width="97" height="55" alt="Виртуальная реальность">
+      <h1 class="visually-hidden">Популярные категории товаров</h1> 
+      <ul class="popular__conteiner-list">
+        <li class="popular__item">
+          <a class="popular__link" href="virtual-reality.html">
+            <figure class="popular__image-field">
+              <div class="popular__virtual-reality">
+                <img class="popular__image" src="img/popular-1.png" width="97" height="55" alt="Виртуальная реальность">
+              </div>
+              <figcaption class="popular__text">Виртуальная реальность</figcaption>
+            </figure>
           </a>
         </li>
-        <li>
-          <a class="popular__item popular-monopods-for-a-selfie" href="monopods-for-a-selfie.html">
-            <img class="popular__image" src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи">
+        <li class="popular__item">
+          <a class="popular__link" href="monopods-for-a-selfie.html">
+            <figure class="popular__image-field">
+              <div class="popular__monopods-for-a-selfie">
+                <img class="popular__image" src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи">
+              </div>
+              <figcaption class="popular__text">Моноподы для селфи</figcaption>
+            </figure>
           </a>
         </li>
-        <li>
-          <a class="popular__item popular-action-cameras" href="action-cameras.html">
-            <img class="popular__image" src="img/popular-3.png" width="71" height="87" alt="Экшн-камеры">
+        <li class="popular__item">
+          <a class="popular__link" href="action-cameras.html">
+            <figure class="popular__image-field">
+              <div class="popular__action-cameras">
+                <img class="popular__image" src="img/popular-3.png" width="71" height="87" alt="Экшн-камеры">
+              </div>
+              <figcaption class="popular__text">Экшн-камеры</figcaption>
+            </figure>
           </a>
         </li>
-        <li>
-          <a class="popular__item popular-fitness-bracelets" href="fitness-bracelets.html">
-            <img class="popular__image" src="img/popular-4.png" width="107" height="65" alt="Фитнес-браслеты">
+        <li class="popular__item">
+          <a class="popular__link" href="fitness-bracelets.html">
+            <figure class="popular__image-field">
+              <div class="popular__fitness-bracelets">
+                <img class="popular__image" src="img/popular-4.png" width="107" height="65" alt="Фитнес-браслеты">
+              </div>
+              <figcaption class="popular__text">Фитнес-браслеты</figcaption>
+            </figure>
           </a>
         </li>
-        <li>
-          <a class="popular__item popular-smart-watch" href="smart-watch.html">
-            <img class="popular__image" src="img/popular-5.png" width="56" height="98" alt="Умные часы">
+        <li class="popular__item">
+          <a class="popular__link" href="smart-watch.html">
+            <figure class="popular__image-field">
+              <div class="popular__smart-watch">
+                <img class="popular__image" src="img/popular-5.png" width="56" height="98" alt="Умные часы">
+              </div>
+              <figcaption class="popular__text">Умные часы</figcaption>
+            </figure>
           </a>
         </li>
-        <li>
-          <a class="popular__item popular-quadcopters" href="quadcopters.html">
-            <img class="popular__image" src="img/popular-6.png" width="132" height="69" alt="Квадрокоптеры">
+        <li class="popular__item">
+          <a class="popular__link" href="quadcopters.html">
+            <figure class="popular__image-field">
+              <div class="popular__quadcopters">
+                <img class="popular__image" src="img/popular-6.png" width="132" height="69" alt="Квадрокоптеры">
+              </div>
+              <figcaption class="popular__text">Квадрокоптеры</figcaption>
+            </figure>
           </a>
         </li>
       </ul>
@@ -289,6 +317,7 @@
     </section>
     
     <section class="content-container__logotypes logotypes">
+      <h1 class="visually-hidden">Логотипы компаний производителей</h1>
       <img class="logotypes__image" src="img/logo-1-jpg.png" width="260" height="100" alt="Логотип DJI">
       <img class="logotypes__image" src="img/logo-2-jpg.png" width="260" height="100" alt="Логотип SP Gadgets">
       <img class="logotypes__image" src="img/logo-3-jpg.png" width="260" height="100" alt="Логотип GoPro">
@@ -296,6 +325,7 @@
     </section>
     
     <section class="content-container__info info">
+      <h1 class="visually-hidden">Информация об организации и контакты</h1>
       
       <section class="info__about about">
         <h2 class="header">
@@ -387,7 +417,7 @@
           <a class="footer-rightside__secondary-menu-link" href="#">Сравнить</a>
         </li>
         <li class="footer-rightside__secondary-menu-item">
-          <a class="footer-rightside__secondary-menu-link" href="#">Корзина</a class="footer-rightside__secondary-menu-link">
+          <a class="footer-rightside__secondary-menu-link" href="#">Корзина</a>
         </li>
       </ul>
       <p class="footer-rightside__phone-text">
