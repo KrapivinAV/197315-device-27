@@ -15,22 +15,16 @@
     <a class="site-header__logo" href="index.html">
       <img class="site-header__logo-img" src="img/logo-black.svg" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
     </a>
-
     <nav class="site-header__secondary-menu">
+      <form class="site-header__search search-form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <input class="search-form__field" type="search" name="search" id="search" placeholder="Поиск по сайту">
+        <label class="search-form__label" for="search">
+          <span class="visually-hidden">Поиск по сайту</span>
+          <img class="search-form__label-img" src="img/search.svg" width="16" height="16" alt="Поиск">
+        </label>
+        <button class="search-form__button-submit" type="submit">Найти</button>
+      </form>
       <ul class="site-header__secondary-menu-list">
-        <li class="site-header__secondary-menu-item">
-          <form class="site-header__search search-form" action="https://echo.htmlacademy.ru/courses" method="post">
-            <input class="search-form__field" type="search" name="search" id="search" placeholder="Поиск по сайту">
-            <label class="search-form__label" for="search">
-              <p class="visually-hidden">Поиск по сайту</p>
-              <img class="search-form__label-img" src="img/search.svg" width="16" height="16" alt="Поиск">
-            </label>
-            <input class="search-form__button-submit" id="search-submit" type="submit" value="Найти">
-            <label class="visually-hidden" for="search-submit">
-              Кнопка поля поиска
-            </label>
-          </form>
-        </li>
         <li class="site-header__secondary-menu-item">
           <a class="site-header__secondary-menu-link" href="#">Выйти</a>
         </li>
@@ -42,40 +36,41 @@
         </li>
       </ul>
     </nav>
-    
-    <nav class="site-header__primary-menu">
-      <ul class="site-header__primary-menu-list">
-        <li class="site-header__primary-menu-item">
-          <a class="site-header__primary-menu-link" href="catalog.html">Каталог товаров</a>
-          <ul class="site-header__primary-submenu-list">
-            <li class="site-header__primary-submenu-item">
-              <a class="site-header__primary-submenu-link" href="virtual-reality.html">Виртуальная реальность</a>
+    <nav class="site-header__primary-menu primary-menu">
+      <ul class="primary-menu__elements-list">
+        <li class="primary-menu__catalog">
+          <a class="primary-menu__catalog-link" href="catalog.html">Каталог товаров</a>
+          <ul class="primary-menu__catalog-list">
+            <li class="primary-menu__catalog-item">
+              <a class="primary-menu__catalog-item-link" href="virtual-reality.html">Виртуальная реальность</a>
             </li>
-            <li class="site-header__primary-submenu-item">
-              <a class="site-header__primary-submenu-link" href="monopods-for-a-selfie.html">Моноподы для селфи</a>
+            <li class="primary-menu__catalog-item">
+              <a class="primary-menu__catalog-item-link" href="monopods-for-a-selfie.html">Моноподы для селфи</a>
             </li>
-            <li class="site-header__primary-submenu-item">
-              <a class="site-header__primary-submenu-link" href="action-cameras.html">Экшн-камеры</a>
+            <li class="primary-menu__catalog-item">
+              <a class="primary-menu__catalog-item-link" href="action-cameras.html">Экшн-камеры</a>
             </li>
-            <li class="site-header__primary-submenu-item">
-              <a class="site-header__primary-submenu-link" href="fitness-bracelets.html">Фитнес-браслеты</a>
+            <li class="primary-menu__catalog-item">
+              <a class="primary-menu__catalog-item-link" href="fitness-bracelets.html">Фитнес-браслеты</a>
             </li>
-            <li class="site-header__primary-submenu-item">
-              <a class="site-header__primary-submenu-link" href="smart-watch.html">Умные часы</a>
+            <li class="primary-menu__catalog-item">
+              <a class="primary-menu__catalog-item-link" href="smart-watch.html">Умные часы</a>
             </li>
-            <li class="site-header__primary-submenu-item">
-              <a class="site-header__primary-submenu-link" href="quadcopters.html">Квардокоптеры</a>
+            <li class="primary-menu__catalog-item">
+              <a class="primary-menu__catalog-item-link" href="quadcopters.html">Квардокоптеры</a>
             </li>
           </ul>
         </li>
-        <li class="site-header__primary-menu-item">
-          <a class="site-header__primary-menu-link" href="#">Доставка</a>
+      </ul>
+      <ul class="primary-menu__services-list">
+        <li class="primary-menu__services-item">
+          <a class="primary-menu__services-link" href="#">Доставка</a>
         </li>
-        <li class="site-header__primary-menu-item">
-          <a class="site-header__primary-menu-link" href="#">Гарантии</a>
+        <li class="primary-menu__services-item">
+          <a class="primary-menu__services-link" href="#">Гарантии</a>
         </li>
-        <li class="site-header__primary-menu-item">
-          <a class="site-header__primary-menu-link" href="#">Контакты</a>
+        <li class="primary-menu__services-item">
+          <a class="primary-menu__services-link" href="#">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -100,9 +95,10 @@
     </section>
 
     <section class="content-conteiner__goods goods">
-      
+      <h2 class="visually-hidden">Область выборки товаров</h2>
+
       <section class="goods__filter">
-        <h2 class="goods__filter-title">Фильтр:</h2>
+        <h3 class="goods__filter-title">Фильтр:</h3>
         <form action="https://echo.htmlacademy.ru/courses" method="get">
           <fieldset class="goods__filter-price filter-price">
             <legend class="filter-price__legend">Стоимость</legend>
@@ -151,9 +147,9 @@
       </section>
 
       <section class="goods__sorted sorted-goods">
-        <h2 class="sorted-goods__title visually-hidden">Список отсортированных товаров</h2>
+        <h3 class="sorted-goods__title visually-hidden">Список отсортированных товаров</h3>
         <div class="sorted-goods__sorter sorter">
-          <h2 class="sorter__title">Сортировка:</h2>
+          <h4 class="sorter__title">Сортировка:</h4>
           <ul class="sorter__parameter-list">
             <li class="sorter__parameter-item">
               <a class="sorter__parameter-link" href="#">По цене</a>
