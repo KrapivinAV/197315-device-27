@@ -13,7 +13,7 @@
   <header class="site-header">
 
     <a class="site-header__logo" href="index.html">
-      <img class="site-header__logo-img" src="img/logo-black.svg" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
+      <img class="site-header__logo-img" src="img/logo-black.svg" width="163" height="35" alt="Логотип интернет-магазина &quot;Девайс&quot;">
     </a>
     <nav class="site-header__secondary-menu">
       <form class="site-header__search search-form" action="https://echo.htmlacademy.ru/courses" method="post">
@@ -25,6 +25,7 @@
       </form>
       <ul class="site-header__secondary-menu-list">
         <li class="site-header__secondary-menu-item">
+          <a class="site-header__secondary-menu-link profile-link" href="profile.html">Валентин Петухов</a>
           <a class="site-header__secondary-menu-link" href="#">Выйти</a>
         </li>
         <li class="site-header__secondary-menu-item">
@@ -63,13 +64,13 @@
       </ul>
       <ul class="primary-menu__services-list">
         <li class="primary-menu__services-item">
-          <a class="primary-menu__services-link" href="#">Доставка</a>
+          <a class="primary-menu__services-link" href="index.html#services">Доставка</a>
         </li>
         <li class="primary-menu__services-item">
-          <a class="primary-menu__services-link" href="#">Гарантии</a>
+          <a class="primary-menu__services-link" href="index.html#services">Гарантии</a>
         </li>
         <li class="primary-menu__services-item">
-          <a class="primary-menu__services-link" href="#">Контакты</a>
+          <a class="primary-menu__services-link" href="index.html#info">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -88,18 +89,19 @@
           <a class="page__bread-crumbs-link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="page__bread-crumbs-item">
-          <span>Моноподы для селфи</span>
+          <a class="page__bread-crumbs-link">Моноподы для селфи</a>
         </li>
       </ul>
     </section>
 
     <section class="content-conteiner__sorter sorter">
       <h2 class="visually-hidden">Сортировка</h2>
+      <h3 class="sorter__filter-title" role="none">Фильтр:</h3>
       <div class="sorter__inner">
         <h3 class="sorter__title">Сортировка:</h3>
         <ul class="sorter__parameter-list">
           <li class="sorter__parameter-item">
-            <a class="sorter__parameter-link parameter-active" href="">По цене</a>
+            <a class="sorter__parameter-link parameter-active">По цене</a>
           </li>
           <li class="sorter__parameter-item">
             <a class="sorter__parameter-link" href="">По типу</a>
@@ -115,7 +117,7 @@
             </a>
           </li>
           <li class="sorter__direction-item">
-            <a class="sorter__direction-arrow arrow-active" href="">
+            <a class="sorter__direction-arrow arrow-active">
               <img src="img/icon-down-dir.svg" width="11" height="10" alt="По убыванию">
             </a>
           </li>
@@ -123,16 +125,21 @@
       </div>
     </section>
 
-
     <section class="content-conteiner__goods goods">
       <h2 class="visually-hidden">Область выборки товаров</h2>
 
       <section class="goods__filter">
-        <h3 class="goods__filter-title visually-hidden">Фильтр:</h3>
+        <h3 class="visually-hidden">Фильтр:</h3>
         <form action="https://echo.htmlacademy.ru/courses" method="get">
           <fieldset class="goods__filter-price filter-price">
             <legend class="filter-price__legend">Стоимость</legend>
-            <input type="range" id="price" name="price" min="0" max="10000" step="100">
+            <div class="filter-price__range range">
+              <div class="range__scale">
+                <div class="range__bar"></div>
+              </div>
+              <div class="range__toggle range__toggle--min"></div>
+              <div class="range__toggle range__toggle--max"></div>
+            </div>
           </fieldset>
           <fieldset class="goods__filter-color filter-color">
             <legend class="filter-color__legend">Цвет</legend>
@@ -196,41 +203,39 @@
           <article class="goods-items__item item-good">
             <img class="item-good__image" src="img/item-1.png" width="360" height="380" alt="Любительская селфи-палка">
             <div class="item-good__controls">
-              <a class="item-good__link button button-goods" href="#">Подробнее</a>
-              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
+              <button class="item-good__basket-add button" type="button">В корзину</button>
+              <button class="item-good__compare-add" type="button">Добавить к сравнению</button>
             </div>
-            <a class="item-good__page" href="#">Любительская селфи-палка</a>
+            <a class="item-good__page" href="item-page.html">Любительская селфи-палка</a>
             <p class="item-good__price">500 руб.</p>            
           </article>
           <article class="goods-items__item item-good">
             <img class="item-good__image" src="img/item-2.png" width="360" height="380" alt="Профессиональная селфи-палка">
             <div class="item-good__controls">
-              <a class="item-good__link button button-goods" href="#">Подробнее</a>
-              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
+              <button class="item-good__basket-add button" type="button">В корзину</button>
+              <button class="item-good__compare-add" type="button">Добавить к сравнению</button>
             </div>
-            <a class="item-good__page" href="#">Профессиональная селфи-палка</a>
+            <a class="item-good__page" href="item-page.html">Профессиональная селфи&#8722палка</a>
             <p class="item-good__price">1 500 руб.</p>
           </article>
           <article class="goods-items__item item-good">
             <img class="item-good__image" src="img/item-3.png" width="360" height="380" alt="Непотопляемая селфи-палка">
             <div class="item-good__controls">
-              <a class="item-good__link button button-goods" href="#">Подробнее</a>
-              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
+              <button class="item-good__basket-add button" type="button">В корзину</button>
+              <button class="item-good__compare-add" type="button">Добавить к сравнению</button>
             </div>
-            <a class="item-good__page" href="#">Непотопляемая селфи-палка</a>
+            <a class="item-good__page" href="item-page.html">Непотопляемая селфипалка</a>
             <p class="item-good__price">2 500 руб.</p>
           </article>
           <article class="goods-items__item item-good">
             <img class="item-good__image" src="img/item-4.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <div class="item-good__controls">
-              <a class="item-good__link button button-goods" href="#">Подробнее</a>
-              <a class="item-good__compare-add" href="#">Добавить к сравнению</a>
+              <button class="item-good__basket-add button" type="button">В корзину</button>
+              <button class="item-good__compare-add" type="button">Добавить к сравнению</button>
             </div>
-            <a class="item-good__page" href="#">Селфи-палка «Следуй за мной»</a>
+            <a class="item-good__page" href="item-page.html">Селфи-палка «Следуй за мной»</a>
             <p class="item-good__price">4 900 руб.</p>
-            <div class="item-good__new">
-              <p class="item-good__new-text">new</p>
-            </div>
+            <div class="item-good__new">new</div>
           </article>
         </div>
         <ul class="sorted-goods__pagination-list pagination">
@@ -238,52 +243,7 @@
             <a class="pagination__link" href="">Назад</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link">1</a>
+            <a class="pagination__link pagination__link--active">1</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="">2</a>
@@ -304,7 +264,7 @@
   <footer class="site-footer">
     <div class="site-footer__leftside footer-leftside">
       <a class="footer-leftside__logo-link" href="index.html">
-        <img class="footer-leftside__logo-img" src="img/logo-yellow.svg" width="163" height="35" alt="Логотип интернет-магазина &quotДевайс&quot">
+        <img class="footer-leftside__logo-img" src="img/logo-yellow.svg" width="163" height="35" alt="Логотип интернет-магазина &quot;Девайс&quot;">
       </a>
       <p class="footer-leftside__address">
         г. Москва, ул. Строителей, 15
@@ -313,13 +273,13 @@
     <div class="site-footer__center footer-center">
       <ul class="footer-center__services-list">
         <li class="footer-center__services-item">
-          <a class="footer-center__services-link" href="">Доставка</a>
+          <a class="footer-center__services-link" href="index.html#services">Доставка</a>
         </li>
         <li class="footer-center__services-item">
-          <a class="footer-center__services-link" href="">Гарантия</a>
+          <a class="footer-center__services-link" href="index.html#services">Гарантия</a>
         </li>
         <li class="footer-center__services-item">
-          <a class="footer-center__services-link" href="">Контакты</a>
+          <a class="footer-center__services-link" href="index.html#info">Контакты</a>
         </li>
       </ul>
       <ul class="footer-center__social-list">

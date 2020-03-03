@@ -3,49 +3,49 @@
 */
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     src:
-        local('Open Sans Light'),
-        local('OpenSans-Light'),
-        url('opensanslight.woff2') format('woff2'),
-        url('opensanslight.woff') format('woff'),
-        url('opensanslight.ttf') format('truetype');
+        local("Open Sans Light"),
+        local("OpenSans-Light"),
+        url("../fonts/web/opensanslight.woff2") format("woff2"),
+        url("../fonts/web/opensanslight.woff") format("woff"),
+        url("../fonts/open_sans/OpenSans-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     src:
-        local('Open Sans'),
-        local('OpenSans'),
-        url('opensans.woff2') format('woff2'),
-        url('opensans.woff') format('woff'),
-        url('opensans.ttf') format('truetype');
+        local("Open Sans"),
+        local("OpenSans"),
+        url("../fonts/web/opensans.woff2") format("woff2"),
+        url("../fonts/web/opensans.woff") format("woff"),
+        url("../fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     src:
-        local('Gilroy Light'),
-        local('Gilroy-Light'),
-        url('Gilroylight.woff2') format('woff2'),
-        url('Gilroylight.woff') format('woff'),
-        url('Gilroylight.ttf') format('truetype');
+        local("Gilroy Light"),
+        local("Gilroy-Light"),
+        url("../fonts/web/Gilroylight.woff2") format("woff2"),
+        url("../fonts/web/gilroylight.woff") format("woff"),
+        url("../fonts/gilroy/Gilroylight.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
     
 @font-face {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     src:
-        local('Gilroy ExtraBold'),
-        local('Gilroy-ExtraBold'),
-        url('Gilroyextrabold.woff2') format('woff2'),
-        url('Gilroyextrabold.woff') format('woff'),
-        url('Gilroyextrabold.ttf') format('truetype');
+        local("Gilroy ExtraBold"),
+        local("Gilroy-ExtraBold"),
+        url("../fonts/web/Gilroyextrabold.woff2") format("woff2"),
+        url("../fonts/web/Gilroyextrabold.woff") format("woff"),
+        url("../fonts/gilroy/Gilroyextrabold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
 }
@@ -54,11 +54,9 @@
 Общая часть
 */
 
-/*
 body * {
     outline: 1px dotted red;
 }
-*/
 
 body {
     display: flex;
@@ -96,12 +94,12 @@ a {
     flex-direction: column;
     width: 1040px;
     margin: 0 auto;
-    padding: 0 60px;
-    min-height: 320px;
+    padding: 0 60px 120px;
+    min-height: 200px;
     background-image: linear-gradient(
         to bottom,
         #ffffff 20px,
-        rgb(240, 197, 46, 0.5) 20px);
+        #f7e296 20px);
 }
 
 .site-header__logo {
@@ -136,7 +134,7 @@ a {
     background-color: transparent;
     opacity: 0.3;
     box-sizing: border-box;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 50px;
@@ -152,6 +150,7 @@ a {
 }
 
 .search-form__field:focus {
+    border-top: 2px solid transparent;
     border-bottom: 2px solid #000000;
     outline: none;
     opacity: 1.0;
@@ -175,7 +174,7 @@ a {
     border: 2px solid #000000;
     box-sizing: border-box;
     background-color: transparent;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -219,7 +218,7 @@ a {
 }
 
 .site-header__secondary-menu-item::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 19px;
     left: -25px;
@@ -240,7 +239,7 @@ a {
 }
 
 .site-header__secondary-menu-link {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 50px;
@@ -261,13 +260,17 @@ a {
     opacity: 0.3;
 }
 
+.profile-link {
+    margin-right: 17px;
+}
+
 .site-header__primary-menu {
     display: flex;
 }
 
 .primary-menu__catalog-link,
 .primary-menu__services-link {
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
@@ -300,7 +303,7 @@ a {
 }
 
 .primary-menu__catalog::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 4px;
     right: -27px;
@@ -326,7 +329,7 @@ a {
     flex-wrap: wrap;
     height: 90px;
     width: 1100px;
-    padding: 33px 0 33px 60px;
+    padding: 30px 0 44px 60px;
     background-color: #f7e296;
 }
 
@@ -345,7 +348,7 @@ a {
 }
 
 .primary-menu__catalog-item-link {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -438,7 +441,7 @@ a {
 }
 
 #promo-btn-2:checked ~ .promo-slider__inner .promo-slide::after {
-    content: '02';
+    content: "02";
 }
   
 #promo-btn-3:checked ~ .promo-slider__inner .promo-slider__slides {
@@ -446,7 +449,7 @@ a {
 }
 
 #promo-btn-3:checked ~ .promo-slider__inner .promo-slide::after {
-    content: '03';
+    content: "03";
 }
 
 .promo-slider__inner {
@@ -470,7 +473,7 @@ a {
 }
 
 .promo-slide::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 38px;
     right: 460px;
@@ -480,13 +483,13 @@ a {
 }
 
 .promo-slide::after {
-    content: '01';
+    content: "01";
     position: absolute;
     top: -12px;
     right: 45px;
     width: 250px;
     height: 200px;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 180px;
     font-weight: 800;
     line-height: 180px;
@@ -517,7 +520,7 @@ a {
 }
 
 .header {
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
@@ -531,7 +534,7 @@ a {
 }
 
 .text-light {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -547,7 +550,7 @@ a {
 .button {
     display: block;
     min-height: 40px;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 40px;
@@ -599,7 +602,7 @@ button.button:active {
 }
 
 .preference__item .item__parameter {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 20px;
@@ -608,7 +611,7 @@ button.button:active {
 }
 
 .preference__item .item__parameter-value {
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 36px;
     font-weight: 300;
     line-height: 48px;
@@ -636,12 +639,13 @@ button.button:active {
     margin: 0px;
 }
 
-.popular__image-field div {
+.popular__image-conteiner {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    height: 160px;
+    width: 156px;
+    height: 156px;
+    padding: 2px;
     background-color: rgb(240, 197, 46, 0.5);
 }
 
@@ -650,34 +654,14 @@ button.button:active {
     max-height: 95%;
 }
 
-.popular__virtual-reality .popular__image {
-    transform: translate(-0px, -1px);
-}
-
-.popular__monopods-for-a-selfie .popular__image {
-    transform: translate(1px, 19px);
-}
-
-.popular__action-cameras .popular__image {
-    transform: translate(5px, 1px);
-}
-
-.popular__fitness-bracelets .popular__image {
-    transform: translate(2px, 2px);
-}
-
-.popular__smart-watch .popular__image {
-    transform: translate(3px, 1px);
-}
-
-.popular__quadcopters .popular__image {
-    transform: translate(-1px, 3px);
+.popular__image--align-end {
+    align-self: flex-end;
 }
 
 .popular__text {
     min-height: 50px;
     margin-top: 33px;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
@@ -731,7 +715,7 @@ button.button:active {
 }
 
 .services-slider__controls::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -74px;
     right: -4px;
@@ -864,7 +848,7 @@ button.button:active {
 
 .info__about::before,
 .info__contacts::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -52px;
     left: 0;
@@ -909,7 +893,7 @@ button.button:active {
 }
 
 .about .about__delivery-text {
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 40px;
@@ -917,7 +901,7 @@ button.button:active {
 }
 
 .about .about__delivery-item::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 16px;
     left: -35px;
@@ -929,9 +913,9 @@ button.button:active {
 
 .page {
     width: 1100px;
-    min-height: 180px;
-    margin: -110px auto 0;
-    padding: 40px 0 0 60px;
+    min-height: 130px;
+    margin: -114px auto 0;
+    padding: 37px 0 12px 60px;
     text-align: left;
     background-color: #ffffff;
 }
@@ -940,17 +924,16 @@ button.button:active {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 .page__bread-crumbs-item {
-    margin-right: 40px;
+    margin-right: 37px;
 }
 
-.page__bread-crumbs-link,
-.page__bread-crumbs-item span {
+.page__bread-crumbs-link {
     position: relative;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
@@ -966,8 +949,8 @@ button.button:active {
     color: rgba(0, 0, 0, 0.1);
 }
 
-.page__bread-crumbs-link::after {
-    content: '';
+.page__bread-crumbs-item:not(:last-child) .page__bread-crumbs-link::after {
+    content: "";
     position: absolute;
     top: 8px;
     right: -22px;
@@ -980,13 +963,16 @@ button.button:active {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     margin: 0 auto;
+    padding: 24px 0 16px;
     background-color: rgb(0, 0, 0, 0.08);
 }
 
 .content-conteiner__sorter::before {
-    content: '';
+    content: "";
     position: absolute;
+    top: 0;
     left: -252px;
     width: 50%;
     height: 100%;
@@ -998,39 +984,35 @@ button.button:active {
     display: flex;
     align-items: flex-start;
     width: 760px;
-    min-height: 47px;
-    padding: 23px 0 0 400px;
+    min-height: 24px;
+    padding-left: 72px;
 }
 
-.sorter__inner::before {
-    content: 'фильтр:';
-    position: absolute;
-    top: 23px;
-    left: 60px;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+.sorter__title, 
+.sorter__filter-title {
+    margin: 0;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 24px;
     letter-spacing: 3.2px;
     color: #000000;
     text-transform: uppercase;
+}
+
+.sorter__filter-title {
+    width: 268px;
+    padding-left: 60px;
 }
 
 .sorter__title {
-    width: 200px;
-    margin: 0;
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    letter-spacing: 3.2px;
-    color: #000000;
-    text-transform: uppercase;
+    width: 190px;
+    padding-right: 10px;
 }
 
 .sorter ul {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     padding-top: 3px;
 }
@@ -1050,7 +1032,7 @@ button.button:active {
 }
 
 .sorter__parameter-link {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -1088,11 +1070,11 @@ button.button:active {
     display: flex;
     justify-content: center;
     min-width: 1160px;
-    min-height: 1290px;
+    min-height: 1216px;
 }
 
 .content-conteiner__goods::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -252px;
     width: 50%;
@@ -1103,36 +1085,23 @@ button.button:active {
 
 .goods__filter {
     min-width: 268px;
-    padding: 70px 0 0 60px;
-}
-
-.goods__filter-title {
-    width: 200px;
-    margin: 0;
-    padding: 23px 0;
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    letter-spacing: 3.2px;
-    color: #000000;
-    text-transform: uppercase;
+    padding: 68px 0 0 60px;
 }
 
 .goods__filter fieldset,
 .goods__filter-buttons {
     width: 200px;
     border: none;
-    margin: 0 0 40px 0;
+    margin: 0 0 31px 0;
     padding: 0;
 }
 
 .goods__filter legend {
     width: 200px;
-    padding-top: 15px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 18px;
     border-top: 2px solid #000000;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
@@ -1144,7 +1113,7 @@ button.button:active {
     position: relative;
     margin: 0;
     padding-left: 40px;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 40px;
@@ -1153,6 +1122,77 @@ button.button:active {
     cursor: pointer;
 }
 
+.filter-price__range {
+    position: relative;
+    margin: 17px 0 36px;
+}
+ 
+.range__scale {
+    height: 2px;
+    background: #dbdbdb;
+}
+  
+.range__bar {
+    width: 118px;
+    height: 2px;
+    background: #91c92f;
+}
+  
+.range__toggle {
+    content: "";
+    position: absolute;
+    top: -9px;
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 0 rgba(0, 1, 1, 0.3);
+    cursor: pointer;
+  }
+  
+.range__toggle--min {
+    left: -5px;
+}
+
+.range__toggle--max {
+    left: 108px;
+}
+
+.range__toggle--min:active {
+    top: -10px;
+    left: -6px;
+    border: 9px solid #ffffff;
+}
+
+.range__toggle--max:active {
+    top: -10px;
+    left: 107px;
+    border: 9px solid #ffffff;
+}
+
+.range__toggle--min::after,
+.range__toggle--max::after {
+    position: absolute;
+    top: 12px;
+    width: 60px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: rgb(0, 0, 0, 0.2);
+}
+
+.range__toggle--min::after {
+    content: "от 0";
+    left: -4px;
+}
+
+.range__toggle--max::after {
+    content: "до 5000";
+    left: -26px;
+}
+  
 .goods__filter label::before {
     content: "";
     position: absolute;
@@ -1230,6 +1270,19 @@ button.button:active {
     background-color: #000000;
 }
 
+.filter-color__input:disabled + .filter-color__label {
+    color: #bfbfbf;
+}
+
+.filter-color__input:disabled + .filter-color__label::before {
+    border-color: #bfbfbf;
+}
+
+.filter-color__input:disabled + .filter-color__label .filter-color__check-bird::before,
+.filter-color__input:disabled + .filter-color__label .filter-color__check-bird::after {
+    background-color: #bfbfbf;
+}
+
 .filter-bluetooth__input:hover + .filter-bluetooth__label::before {
     box-shadow: 0 0 0 4px #666666;
 }
@@ -1250,13 +1303,27 @@ button.button:active {
         inset 0 0 0 5px #000000;
 }
 
-.goods__filter input:disabled + label {
-    opacity: 0.25;
+.filter-bluetooth__input:disabled + .filter-bluetooth__label {
+    color: #bfbfbf;
+}
+
+.filter-bluetooth__input:disabled + .filter-bluetooth__label::before {
+    box-shadow: 0 0 0 4px #bfbfbf;
+}
+
+.filter-bluetooth__input:checked:disabled + .filter-bluetooth__label::before {
+    box-shadow: 
+        0 0 0 4px #bfbfbf,
+        inset 0 0 0 5px #bfbfbf;
+}
+
+.goods__filter input:focus + label::before {
+    outline: 3px solid #78c3e0;
 }
 
 .goods__sorted {
     width: 760px;
-    padding: 70px 0 0 72px;
+    padding: 68px 0 0 72px;
 }
 
 .sorted-goods__goods-items {
@@ -1272,11 +1339,12 @@ button.button:active {
     justify-content: space-between;
     align-content: flex-start;
     width: 360px;
-    min-height: 500px;
+    min-height: 490px;
+    margin-bottom: 16px;
 }
 
 .item-good__image {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 .item-good__controls {
@@ -1298,19 +1366,22 @@ button.button:active {
     z-index: 1;
 }
 
-.item-good__link {
+.item-good__basket-add {
     width: 200px;
     margin-bottom: 20px;
 }
 
 .item-good__compare-add {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 20px;
     letter-spacing: 0.13px;
     color: #000000;
+    background-color: transparent;
+    border: none;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .item-good__compare-add:hover {
@@ -1323,7 +1394,7 @@ button.button:active {
 
 .item-good__page {
     width: 260px;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
@@ -1334,7 +1405,7 @@ button.button:active {
 .item-good__price {
     width: 100px;
     margin: 0;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
@@ -1355,12 +1426,8 @@ button.button:active {
     border: 2px solid rgb(0, 0, 0, 0.1);
     border-radius: 50%;
     box-sizing: border-box;
-    background-color: transparent;
     z-index: 2;
-}
-
-.item-good__new-text {
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 800;
     line-height: 24px;
@@ -1377,20 +1444,20 @@ button.button:active {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 50px;
-    margin-bottom: 75px;
-    padding: 10px 0;
+    margin: -11px 0 75px;
     background-color: #ebebeb;
 }
 
 .pagination__item {
-    padding: 23px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .pagination__item:first-child {
+    min-height: 70px;
     width: 136px;
-    min-height: 24px;
     margin-right: auto;
 }
 
@@ -1399,30 +1466,52 @@ button.button:active {
 }
 
 .pagination__item:last-child {
+    min-height: 70px;
     width: 136px;
-    min-height: 24px;
     margin-left: auto;
 }
 
 .pagination__link {
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 24px;
     letter-spacing: 3.2px;
-    color: #000000;
     text-transform: uppercase;
 }
 
-.pagination__item:first-child:hover,
-.pagination__item:last-child:hover {
+.pagination__item:first-child .pagination__link,
+.pagination__item:last-child .pagination__link {
+    width: 100%;
+    padding: 23px 0;
+    color: #000000;
+}
+
+.pagination__item:first-child .pagination__link:hover,
+.pagination__item:last-child .pagination__link:hover {
     background-color: #d6d6d6;
 }
 
-.pagination__item:first-child:active,
-.pagination__item:last-child:active {
+.pagination__item:first-child .pagination__link:active,
+.pagination__item:last-child .pagination__link:active {
     background-color: #d6d6d6;
     color: rgb(0, 0, 0, 0.3);
+}
+
+.pagination__item:not(:first-child):not(:last-child) .pagination__link {
+    color: rgb(0, 0, 0, 0.3);
+}
+
+.pagination__item:not(:first-child):not(:last-child) .pagination__link:hover {
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.pagination__item:not(:first-child):not(:last-child) .pagination__link:active {
+    color: #000000;
+}
+
+.pagination__item:not(:first-child):not(:last-child) .pagination__link--active {
+    color: #000000;
 }
 
 /*
@@ -1444,7 +1533,7 @@ button.button:active {
 }
 
 .site-footer__leftside::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 237px;
     left: 0;
@@ -1476,7 +1565,7 @@ button.button:active {
 }
 
 .footer-leftside__address {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -1500,7 +1589,7 @@ button.button:active {
 }
 
 .footer-center__services-link {
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
@@ -1551,7 +1640,7 @@ button.button:active {
 }
 
 .footer-rightside__secondary-menu-item::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 12px;
     left: -22px;
@@ -1580,7 +1669,7 @@ button.button:active {
 }
 
 .footer-rightside__secondary-menu-link {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 36px;
@@ -1602,7 +1691,7 @@ button.button:active {
 
 .footer-rightside__phone-text,
 .footer-rightside__phone-link {
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -1669,7 +1758,7 @@ button.button:active {
     left: 50%;
     display: none;
     width: 960px;
-    min-height: 375px;
+    min-height: 376px;
     background-color: #ffffff;
     box-shadow: 0 0 30px 0 #000000;
     transform: translate(-50%, -50%);
@@ -1700,7 +1789,7 @@ button.button:active {
 .popup-write-us__form label {
     margin-bottom: 40px;
     padding: 0px;
-    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
@@ -1715,7 +1804,7 @@ button.button:active {
     padding: 0 20px;
     border: none;
     box-sizing: border-box;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -1784,11 +1873,6 @@ button.button:active {
 .popup-write-us__close:active {
     opacity: 0.3;
 }
-
-
-
-
-
 
 /*
 ---------------------------------------------------
