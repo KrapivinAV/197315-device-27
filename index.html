@@ -25,13 +25,22 @@
       </form>
       <ul class="site-header__secondary-menu-list">
         <li class="site-header__secondary-menu-item">
-          <a class="site-header__secondary-menu-link" href="#">Войти</a>
+          <a class="site-header__secondary-menu-link" href="#">
+            <img class="site-header__secondary-menu-image" src="img/user.svg" width="13" height="12" alt="">
+            <span class="site-header__secondary-menu-text ">Войти</span>
+          </a>
         </li>
         <li class="site-header__secondary-menu-item">
-          <a class="site-header__secondary-menu-link" href="#">Сравнить</a>
+          <a class="site-header__secondary-menu-link" href="#">
+            <img class="site-header__secondary-menu-image" src="img/compare.svg" width="10" height="10" alt="">
+            <span class="site-header__secondary-menu-text">Сравнить</span>
+          </a>
         </li>
         <li class="site-header__secondary-menu-item">
-          <a class="site-header__secondary-menu-link" href="#">Корзина</a>
+          <a class="site-header__secondary-menu-link" href="#">
+            <img class="site-header__secondary-menu-image" src="img/cart.svg" width="12" height="12" alt="">
+            <span class="site-header__secondary-menu-text">Корзина</span>
+          </a>
         </li>
       </ul>
     </nav>
@@ -82,9 +91,9 @@
     <section class="content-container__promo promo">
       <h2 class="visually-hidden">Промо-слайдер</h2>
       <div class="promo-slider">
-        <input type="radio" id="promo-btn-1" name="promo-toggle" checked>
-        <input type="radio" id="promo-btn-2" name="promo-toggle">
-        <input type="radio" id="promo-btn-3" name="promo-toggle">
+        <input class="visually-hidden" type="radio" id="promo-btn-1" name="promo-toggle" checked>
+        <input class="visually-hidden" type="radio" id="promo-btn-2" name="promo-toggle">
+        <input class="visually-hidden" type="radio" id="promo-btn-3" name="promo-toggle">
         <div class="promo-slider__inner">
           <div class="promo-slider__slides">
             <article class="promo-slider__slide promo-slide">
@@ -254,9 +263,9 @@
     <section class="content-container__services services" id="services">
       <h2 class="visually-hidden">Сервисы-слайдер</h2>
       <div class="services-slider">
-        <input type="radio" id="services-btn-1" name="services-toggle" checked>
-        <input type="radio" id="services-btn-2" name="services-toggle">
-        <input type="radio" id="services-btn-3" name="services-toggle">
+        <input class="visually-hidden" type="radio" id="services-btn-1" name="services-toggle" checked>
+        <input class="visually-hidden" type="radio" id="services-btn-2" name="services-toggle">
+        <input class="visually-hidden" type="radio" id="services-btn-3" name="services-toggle">
         <div class="services-slider__controls">
           <label class="button" for="services-btn-1">Доставка</label>
           <label class="button" for="services-btn-2">Гарантия</label>
@@ -267,7 +276,7 @@
             <article class="services-slider__slide services-slide">
               <div class="services-slide__description">
                 <h3 class="header">
-                  Доставка 
+                  Доставка
                 </h3>
                 <p class="text-light">
                   Мы с удовольствием доставим ваш товар прямо к вашему 
@@ -335,7 +344,7 @@
       
       <section class="info__about about">
         <h3 class="header">
-          О нас 
+          О нас
         </h3>
         <p class="text-light">
           Огромный выбор гаджетов не оставит равнодушным гика,
@@ -361,7 +370,7 @@
       
       <section class="info__contacts contacts">
         <h3 class="header">
-          Контакты 
+          Контакты
         </h3>
         <p class="text-light">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
@@ -378,64 +387,75 @@
   </main>
   
   <footer class="site-footer">
-    <div class="site-footer__leftside footer-leftside">
-      <a class="footer-leftside__logo-link" href="#">
-        <img class="footer-leftside__logo-img" src="img/logo-yellow.svg" width="163" height="35" alt="Логотип интернет-магазина &quot;Девайс&quot;">
+
+    <nav class="site-footer__secondary-menu">
+      <a class="site-footer__secondary-menu-logo-link" href="index.html">
+        <img class="site-footer__secondary-menu-logo-image" src="img/logo-yellow.svg" width="163" height="35" alt="Логотип интернет-магазина &quot;Девайс&quot;">
       </a>
-      <p class="footer-leftside__address">
+      <ul class="site-footer__secondary-menu-list">
+        <li class="site-footer__secondary-menu-item">
+          <a class="site-footer__secondary-menu-link" href="#">
+            <img class="site-footer__secondary-menu-image" src="img/user-yellow.svg" width="13" height="12" alt="">
+            <span class="site-footer__secondary-menu-text ">Войти</span>
+          </a>
+        </li>
+        <li class="site-footer__secondary-menu-item">
+          <a class="site-footer__secondary-menu-link" href="#">
+            <img class="site-footer__secondary-menu-image" src="img/compare-yellow.svg" width="10" height="10" alt="">
+            <span class="site-footer__secondary-menu-text">Сравнить</span>
+          </a>
+        </li>
+        <li class="site-footer__secondary-menu-item">
+          <a class="site-footer__secondary-menu-link" href="#">
+            <img class="site-footer__secondary-menu-image" src="img/cart-yellow.svg" width="12" height="12" alt="">
+            <span class="site-footer__secondary-menu-text">Корзина</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="site-footer__info footer-info">
+      <p class="footer-info__address">
         г. Москва, ул. Строителей, 15
       </p>
-    </div>
-    <div class="site-footer__center footer-center">
-      <ul class="footer-center__services-list">
-        <li class="footer-center__services-item">
-          <a class="footer-center__services-link" href="#services">Доставка</a>
+      <ul class="footer-info__services-list">
+        <li class="footer-info__services-item">
+          <a class="footer-info__services-link" href="index.html#services">Доставка</a>
         </li>
-        <li class="footer-center__services-item">
-          <a class="footer-center__services-link" href="#services">Гарантия</a>
+        <li class="footer-info__services-item">
+          <a class="footer-info__services-link" href="index.html#services">Гарантия</a>
         </li>
-        <li class="footer-center__services-item">
-          <a class="footer-center__services-link" href="#info">Контакты</a>
+        <li class="footer-info__services-item">
+          <a class="footer-info__services-link" href="index.html#info">Контакты</a>
         </li>
       </ul>
-      <ul class="footer-center__social-list">
-        <li class="footer-center__social-item">
-          <a class="footer-center__social-link" href="https://www.facebook.com/device">
-            <img class="footer-center__social-img" src="img/fb.svg" width="32" height="32" alt="Facebook">
-          </a>
-        </li>
-        <li class="footer-center__social-item">
-          <a class="footer-center__social-link" href="https://www.instagram.com/device/">
-            <img class="footer-center__social-img" src="img/instagram.svg" width="32" height="32" alt="Instagram">
-          </a>
-        </li>
-        <li class="footer-center__social-item">
-          <a class="footer-center__social-link" href="https://twitter.com/device">
-            <img class="footer-center__social-img" src="img/twitter.svg" width="32" height="32" alt="Twitter">
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="site-footer__rightside footer-rightside">
-      <ul class="footer-rightside__secondary-menu-list">
-        <li class="footer-rightside__secondary-menu-item">
-          <a class="footer-rightside__secondary-menu-link" href="#">Войти</a>
-        </li>
-        <li class="footer-rightside__secondary-menu-item">
-          <a class="footer-rightside__secondary-menu-link" href="#">Сравнить</a>
-        </li>
-        <li class="footer-rightside__secondary-menu-item">
-          <a class="footer-rightside__secondary-menu-link" href="#">Корзина</a>
-        </li>
-      </ul>
-      <p class="footer-rightside__phone-text">
+      <p class="footer-info__phone-text">
         Тел.: 
-        <a class="footer-rightside__phone-link" href="tel:+74954959595">+7 (495) 495-95-95</a>
+        <a class="footer-info__phone-link" href="tel:+74954959595">+7 (495) 495-95-95</a>
       </p>
-      <a class="footer-rightside__developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="footer-rightside__developer-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML-академии">
+    </div>
+    <div class="site-footer__links footer-links">
+      <ul class="footer-links__social-list">
+        <li class="footer-links__social-item">
+          <a class="footer-links__social-link" href="https://www.facebook.com/device">
+            <img class="footer-links__social-img" src="img/fb.svg" width="32" height="32" alt="Facebook">
+          </a>
+        </li>
+        <li class="footer-links__social-item">
+          <a class="footer-links__social-link" href="https://www.instagram.com/device/">
+            <img class="footer-links__social-img" src="img/instagram.svg" width="32" height="32" alt="Instagram">
+          </a>
+        </li>
+        <li class="footer-links__social-item">
+          <a class="footer-links__social-link" href="https://twitter.com/device">
+            <img class="footer-links__social-img" src="img/twitter.svg" width="32" height="32" alt="Twitter">
+          </a>
+        </li>
+      </ul>
+      <a class="footer-links__developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img class="footer-links__developer-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML-академии">
       </a>
     </div>
+
   </footer>
 
   <section class="popup popup-map">
@@ -465,5 +485,7 @@
   </section>
 
   <script src="js/popup.js"></script>
+
 </body>
+
 </html>

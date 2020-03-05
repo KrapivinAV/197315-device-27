@@ -1,21 +1,21 @@
 
-var linkModal = document.querySelector('.popup-write-us__open');
-var linkMap = document.querySelector('.popup-map__open');
+let linkModal = document.querySelector('.popup-write-us__open');
+let linkMap = document.querySelector('.popup-map__open');
   
-var popupModal = document.querySelector('.popup-write-us');
-var popupMap = document.querySelector('.popup-map');
+let popupModal = document.querySelector('.popup-write-us');
+let popupMap = document.querySelector('.popup-map');
 
-var closeModal = popupModal.querySelector('.popup-write-us__close');
-var closeMap = popupMap.querySelector('.popup-map__close');
+let closeModal = popupModal.querySelector('.popup-write-us__close');
+let closeMap = popupMap.querySelector('.popup-map__close');
 
-var form = popupModal.querySelector('.popup-write-us__form');
-var name = popupModal.querySelector('.popup-write-us__name-field');
-var email = popupModal.querySelector('.popup-write-us__email-field');
-var text = popupModal.querySelector('.popup-write-us__question-text');
+let form = popupModal.querySelector('.popup-write-us__form');
+let name = popupModal.querySelector('.popup-write-us__name-field');
+let email = popupModal.querySelector('.popup-write-us__email-field');
+let text = popupModal.querySelector('.popup-write-us__question-text');
 
-var isStorageSupport = true;
-var storageName = '';
-var storageMail = '';
+let isStorageSupport = true;
+let storageName = '';
+let storageMail = '';
 
 try {
   storageName = localStorage.getItem('name');
