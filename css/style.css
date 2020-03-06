@@ -8,8 +8,7 @@
         local("Open Sans Light"),
         local("OpenSans-Light"),
         url("../fonts/web/opensanslight.woff2") format("woff2"),
-        url("../fonts/web/opensanslight.woff") format("woff"),
-        url("../fonts/open_sans/OpenSans-Light.ttf") format("truetype");
+        url("../fonts/web/opensanslight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
@@ -20,8 +19,7 @@
         local("Open Sans"),
         local("OpenSans"),
         url("../fonts/web/opensans.woff2") format("woff2"),
-        url("../fonts/web/opensans.woff") format("woff"),
-        url("../fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
+        url("../fonts/web/opensans.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
@@ -32,8 +30,7 @@
         local("Gilroy Light"),
         local("Gilroy-Light"),
         url("../fonts/web/gilroylight.woff2") format("woff2"),
-        url("../fonts/web/gilroylight.woff") format("woff"),
-        url("../fonts/gilroy/Gilroylight.ttf") format("truetype");
+        url("../fonts/web/gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
@@ -44,8 +41,7 @@
         local("Gilroy ExtraBold"),
         local("Gilroy-ExtraBold"),
         url("../fonts/web/gilroyextrabold.woff2") format("woff2"),
-        url("../fonts/web/gilroyextrabold.woff") format("woff"),
-        url("../fonts/gilroy/Gilroyextrabold.ttf") format("truetype");
+        url("../fonts/web/gilroyextrabold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
@@ -296,7 +292,21 @@ a {
     display: none;
 }
 
-.primary-menu__catalog:hover ul,
+.primary-menu__catalog:hover ul {
+    position: absolute;
+    left: -60px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 90px;
+    width: 1100px;
+    padding: 30px 0 44px 60px;
+    background-color: #f7e296;
+}
+
 .primary-menu__catalog:focus-within ul {
     position: absolute;
     left: -60px;
@@ -635,6 +645,7 @@ button.button:active {
 
 .popular__text {
     min-height: 50px;
+    width: 100%;
     margin-top: 33px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
@@ -723,8 +734,6 @@ button.button:active {
 }
 
 .services-slider__inner {
-    display: flex;
-    justify-content: flex-start;
     width: 880px;
     overflow: hidden;
 }
@@ -1332,7 +1341,10 @@ button.button:active {
     background-color: rgba(238, 238, 238, 0.7);
 }
 
-.item-good:hover .item-good__controls,
+.item-good:hover .item-good__controls {
+    z-index: 1;
+}
+
 .item-good:focus-within .item-good__controls {
     z-index: 1;
 }
